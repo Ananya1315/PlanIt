@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form id="login" action="/login" method="post">
+        <h1>Login</h1>
+    <class="input-box">
+        <input type="text" id="name" name="uname" placeholder="User Name" class="data">
+    <div class="icon">
+    <input type="password" id="pass" name="password" placeholder="Password" class="data">
+    <img src="https://static.vecteezy.com/system/resources/thumbnails/013/729/597/small_2x/show-password-icon-eye-symbol-vision-hide-from-watch-icon-secret-view-web-design-element-vector.jpg" id="eyeicon">
+    </div>
+    <button type="submit" id="btn">Login</button>
+
+</form>
+<script>
+    let eyeicon= document.getElementById("eyeicon");
+    let passowrd= document.getElementById("pass");
+
+    eyeicon.addEventListener("click",()=>{
+        if(passowrd.type=="password"){
+            passowrd.type="text";
+            eyeicon.src="https://e7.pngegg.com/pngimages/120/510/png-clipart-human-eye-open-graphics-eye-emblem-trademark-thumbnail.png";
+        }
+        else{
+            passowrd.type="password";
+            eyeicon.src="https://static.vecteezy.com/system/resources/thumbnails/013/729/597/small_2x/show-password-icon-eye-symbol-vision-hide-from-watch-icon-secret-view-web-design-element-vector.jpg";
+        }
+    })
+</script>
+</body>
+</html>
